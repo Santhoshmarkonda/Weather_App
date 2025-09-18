@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="app-title">Weather Forecast</h1>
+
+    <div class="search-box">
+      <input type="text" id="city" placeholder="Enter city name">
+      <button onclick="getWeather()"><b>Search</b></button>
+    </div>
+
+    <div class="loading">
+      <div class="loading-spinner"></div>
+      <p>Loading weather data...</p>
+    </div>
+
+    <div class="error-message" id="error-message"></div>
+
+    <div class="weather-card" id="weather-card">
+      <h2 class="city-name" id="city-name"></h2>
+
+      <div class="temperature">
+        <img src="" alt="Weather icon" class="weather-icon" id="weather-icon">
+        <span id="temperature"></span>
+      </div>
+
+      <div class="weather-description" id="weather-description"></div>
+
+      <div class="weather-details">
+        <div class="detail">
+          <span class="detail-title">Feels Like</span>
+          <span class="detail-value" id="feels-like"></span>
+        </div>
+        <div class="detail">
+          <span class="detail-title">Humidity</span>
+          <span class="detail-value" id="humidity"></span>
+        </div>
+        <div class="detail">
+          <span class="detail-title">Wind Speed</span>
+          <span class="detail-value" id="wind-speed"></span>
+        </div>
+        <div class="detail">
+          <span class="detail-title">Pressure</span>
+          <span class="detail-value" id="pressure"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
